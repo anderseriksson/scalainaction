@@ -1,7 +1,7 @@
 Project name
 ============
 
-Project description.
+Source code for "Scala in action" talk.
 
 License
 -------
