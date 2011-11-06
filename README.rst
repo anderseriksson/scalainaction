@@ -3,6 +3,8 @@ Scala in action
 
 Source code for "Scala in action" talk.
 
+For *GameOfLife* there must be symbolic links to the *rt/bin/* and *rt/lib/* folders of a JavaFX SDK distribution.
+
 License
 -------
 
