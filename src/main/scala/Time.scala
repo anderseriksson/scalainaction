@@ -1,1 +1,1 @@
-class Time(hours: Int, minutes: Int)
+class Time(val hours: Int, val minutes: Int)
