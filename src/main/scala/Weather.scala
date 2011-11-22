@@ -1,5 +1,4 @@
 import dispatch._
-import scala.util.control.Exception._
 import scala.xml.Elem
 
 object Weather {
@@ -48,10 +47,12 @@ object Weather {
   }
 
   def currentTemperature(location: String): Option[Int] =
-    catching(classOf[Exception]) opt {
+    try {
       def extractTemperature(weatherResponse: Elem) =
         (weatherResponse \\ "current_conditions" \ "temp_c").headOption map { temp => (temp \ "@data").text.toInt }
       val weatherRequest = :/("www.google.com") / "ig" / "api" <<? Map("weather" -> location, "hl" -> "en")
       Http(weatherRequest <> extractTemperature)
-    } flatMap { x => x }
+    } catch {
+      case _: Exception => None
+    }
 }
