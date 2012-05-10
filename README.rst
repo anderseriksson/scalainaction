@@ -3,7 +3,9 @@ Scala in action
 
 Source code for "Scala in action" talk.
 
-For *GameOfLife* there must be symbolic links to the *rt/bin/* and *rt/lib/* folders of a JavaFX SDK distribution.
+For *GameOfLife* there must be symbolic links to the *rt/bin/* and *rt/lib/* folders of a JavaFX SDK distribution. These links used to be part of git repo but is removed as they are really a part of the personal settings. 
+
+Create them like this ln -s ~/tools/javafx-sdk2.2.0-beta/rt/bin bin in the root folder of the project. 
 
 License
 -------
